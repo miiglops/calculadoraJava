@@ -7,52 +7,32 @@ public class Calculadora {
         System.out.print("Digite um número: ");
         float n1 = (float) keyboard.nextFloat(); // nextFloat usado para float
         
-        System.out.print("Digite a operação que você deseja fazer(tudo minúsculo e sem acentos!): ");
+        System.out.print("Digite o sinal da operação que você deseja fazer(+, - , x , /): ");
         String operacaoString = keyboard.next();
 
         System.out.print("Digite mais um número: ");
         float n2 = (float) keyboard.nextFloat();
 
-        if (operacaoString == "adicao") {
+        if (operacaoString.equals("+")) {
             float n3 = (float) n1 + n2;
             System.out.println("A soma é: "+n3);
         } else{
-            if (operacaoString == "subtracao") {
+            if (operacaoString.equals("-")) {
                 float n3 = (float) n1 - n2;
-                System.out.println("A subtração é: ");
+                System.out.println("A subtração é: "+n3);
             } else {
-                if (operacaoString == "multiplicacao") {
+                if (operacaoString.equals("x")) {
                     float n3 = (float) n1 * n2;
                     System.out.println("A multiplicação é: "+n3);
                 } else {
-                    if (operacaoString == "divisao") {
+                    if (operacaoString.equals("/")) {
                         float n3 = (float) n1 / n2;
-                        float resto = (float) n1 % n2;
                         System.out.println("A divisão é: "+n3);
-                        System.out.println("E o resto da divisão é: "+resto);
                     } else {
                         System.out.println("Operação não reconhecida. Tente novamente!");
                     }
                 }
             }
         }
-
-    /*
-     * if (operacaoString == "+") {
-            float n3 = (float) n1 + n2;
-            System.out.println("A soma é: " +n3);
-        } else if (operacaoString == "-"){
-            float n3 = (float) n1 - n2;
-            System.out.println("A subtração é: " +n3);
-        } else if (operacaoString == "x") {
-            float n3 = (float) n1 * n2;
-            System.out.println("A multiplicação é: " +n3);
-        } else if (operacaoString == "/") {
-            float n3 = (float) n1 / n2;
-            System.out.println("A divisão é: "+n3);
-        } else {
-            System.out.println("Operação não reconhecida, tente novamente!");
-        }
-        */
     }    
 }
